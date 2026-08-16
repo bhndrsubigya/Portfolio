@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subigya Bhandari | Student</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #05000a;
+            color: #f5eaff;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(rgba(255, 0, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero {
+            max-width: 900px;
+        }
+
+        .tag {
+            color: #00ffff;
+            font-size: 1rem;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 9vw, 7rem);
+            color: #ff00ff;
+            text-shadow:
+                0 0 10px #ff00ff,
+                0 0 30px #ff00ff,
+                0 0 60px #ff00ff;
+        }
+
+        .hero h2 {
+            margin-top: 20px;
+            color: #00ffff;
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            text-shadow: 0 0 15px #00ffff;
+        }
+
+        .hero p {
+            margin: 25px auto;
+            max-width: 650px;
+            color: #b9a9c7;
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 28px;
+            border: 2px solid #00ffff;
+            color: #00ffff;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0,255,255,0.3);
+        }
+
+        .button:hover {
+            background: #00ffff;
+            color: #05000a;
+            box-shadow: 0 0 30px #00ffff;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 100px 25px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #ff00ff;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            text-shadow: 0 0 15px #ff00ff;
+        }
+
+        .card {
+            background: rgba(15, 5, 25, 0.9);
+            border: 1px solid #ff00ff;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow:
+                0 0 15px rgba(255, 0, 255, 0.15),
+                inset 0 0 20px rgba(0, 255, 255, 0.03);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 0 30px rgba(255, 0, 255, 0.4),
+                0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        .card h3 {
+            color: #00ffff;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #c8b9d5;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            text-align: center;
+            padding: 30px 20px;
+            border: 1px solid #00ffff;
+            background: rgba(0, 255, 255, 0.03);
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+        }
+
+        .skill h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+
+        .skill p {
+            color: #9e91aa;
+            font-size: 0.9rem;
+        }
+
+        .project {
+            border-left: 4px solid #ff00ff;
+            padding: 25px;
+            background: rgba(255, 0, 255, 0.04);
+        }
+
+        .project h3 {
+            color: #ff00ff;
+            margin-bottom: 10px;
+        }
+
+        .social {
+            text-align: center;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            border: 1px solid #00ffff;
+            color: #00ffff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            background: #00ffff;
+            color: #05000a;
+            box-shadow: 0 0 25px #00ffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #24102f;
+            color: #75657f;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 70px 18px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .tag {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero">
+            <div class="tag">WELCOME TO MY DIGITAL SPACE</div>
+
+            <h1>SUBIGYA</h1>
+
+            <h2>Student • Learner • Future Creator</h2>
+
+            <p>
+                I'm Subigya Bhandari, a student who is interested in
+                technology and learning new things. I'm currently
+                developing my skills and exploring the digital world
+                one step at a time.
+            </p>
+
+            <a href="#about" class="button">ENTER PORTFOLIO</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>ABOUT ME</h2>
+
+        <div class="card">
+            <h3>Who Am I?</h3>
+
+            <p>
+                Hi, I'm Subigya Bhandari. I'm a student who enjoys
+                learning about technology and discovering new skills.
+                I'm still at the beginning of my journey, but I'm
+                constantly learning and improving.
+            </p>
+
+            <br>
+
+            <p>
+                This portfolio represents my journey. As I learn new
+                skills and create new projects, I'll continue adding
+                them here.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>MY SKILLS</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>Learning</h3>
+                <p>Always exploring new ideas and technologies.</p>
+            </div>
+
+            <div class="skill">
+                <h3>Technology</h3>
+                <p>Interested in computers and the digital world.</p>
+            </div>
+
+            <div class="skill">
+                <h3>Creativity</h3>
+                <p>Interested in creating and experimenting with ideas.</p>
+            </div>
+
+            <div class="skill">
+                <h3>Future Skills</h3>
+                <p>Building my knowledge step by step.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>PROJECTS</h2>
+
+        <div class="project">
+            <h3>PROJECTS LOADING...</h3>
+
+            <p>
+                I'm currently learning and working toward my first
+                projects. Check back later to see what I create.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>CONNECT WITH ME</h2>
+
+        <div class="social">
+
+            <a
+                href="https://www.instagram.com/bhandareee_subigya/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Instagram
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Subigya Bhandari • Built while learning
+    </footer>
+
+</body>
+</html>
